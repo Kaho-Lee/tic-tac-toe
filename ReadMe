@@ -1,0 +1,78 @@
+ZHIHAO ZHANG 1472413  LBL 2 JIAHAO LI 1461912 LBL 1
+
+For this final project, we decided to make a arduino version of tic tac toe.
+This game has two mode. One is the traditional human vs humnan. This program can
+decide which side can winning part. Second mode is human vs computer. We create a
+simple AI by using the minmax algarithm.
+
+Acknowledgment
+Thanks for your help on the minmax algarism Chen Ma
+We also learn the algarithm from
+wikipedia https://en.wikipedia.org/wiki/Minimax
+Youtube  https://www.youtube.com/watch?v=STjW3eH0Cik
+
+Milestone:
+This time we tried to use the minmax algarithm to build up a really simple AI.
+This algarithm will go throw all the possiblity and choose the best move for the
+computer.We most difficult part is to understand the recursion function.
+
+The second milestone is create a button to regret one step.
+
+Future improvement:
+Overall, the speed of the code is acceptable. Due to the time limitation, we didn't
+add the alpha-beta pruning.  Basically, alpha-beta pruning is to cut off some meaningless
+brunch which can increase the running time.
+
+How to play:
+Main menu:
+potential meter: Red light (pin 13) not very smart ( give computer chance to win)
+                 Green light (pin 12) smart (you can't beat it )
+Joy stick : select mode
+            press button to confirm the mode
+Mode:"man vs comp"
+Human : "o" and always go first.
+Computer : "x" go second
+
+Mode:"man vs man"
+first one :"o"
+Second one :"x"
+
+In both mode, people can regret one step by press button (pin 11)
+
+After game, press button (pin 3) to go back to main menu
+
+
+
+The connection of the arduino should follow the instructions below.
+LCD:
+  1.  GND <--> BB GND bus
+  2.  VCC <--> BB positive bus
+  3.  RESET <--> Pin 8
+  4.  D/C (Data/Command) <--> Pin 7
+  5.  CARD_CS (Card Chip Select) <--> Pin 5
+  6.  TFT_CS (TFT/screen Chip Select) <--> Pin 6
+  7.  MOSI (Master Out Slave In) <--> Pin 51
+  8.  SCK (Clock) <--> Pin 52
+  9.  MISO (Master In Slave Out) <--> 50
+  10. LITE (Backlite) <--> BB positive bus
+
+Joystick:
+  1.  VCC <--> BB positive bus
+  2.  VERT <--> Pin A0
+  3.  HOR <--> Pin A1
+  4.  SEL <--> Pin 9
+  5.  GND <--> BB GND bus
+Potentialmeter:
+  1. outer pin 1 <--> BB GND bus
+  2. outer pin 2 <--> BB positive bus
+  3. middle pin <--> A9
+LED
+  1. LED red long pin  <--> 13
+  2. LED red short pin <--> BB GND bus
+  3. LED green long pin <--> 12
+  4. LED green long pin <--> BB GND bus
+Button
+  1.Left button <--> BB GND bus
+  2.Left button <--> 3
+  3.Right button <-->BB GND bus
+  4.Right button <--> 11
